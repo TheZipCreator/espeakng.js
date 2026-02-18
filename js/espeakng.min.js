@@ -15,7 +15,7 @@
  * along with this program; if not, see: <http://www.gnu.org/licenses/>.
  */
 
-function eSpeakNG(worker_path, ready_cb) {
+export function eSpeakNG(worker_path, ready_cb) {
   this.worker = new Worker(worker_path);
   this.ready = false;
   this.worker.onmessage = function(e) {
